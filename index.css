@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --spotify-green: #1DB954;
     --footer-height: 40px;
@@ -7,8 +9,9 @@ html,
 body,
 * {
     -webkit-app-region: drag;
-    -webkit-user-select: none;
+    user-select: none;
     cursor: default;
+    font-family: 'Prompt', sans-serif;
 }
 
 body {
@@ -230,14 +233,14 @@ body {
 
 .playlist-title {
     font-size: 86px;
-    font-weight: 1000;
+    font-weight: 600;
 
     margin-top: 10px;
-    font-family: "AvenirLTStd-Black";
+    font-family: "Prompt", sans-serif;
 }
 
 .playlist-description {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Prompt', sans-serif;
     font-size: 16px;
     font-weight: 400;
     margin-top: 20px;
@@ -264,7 +267,7 @@ body {
 
 .playlist-stats span:first-of-type {
     font-weight: 1000;
-    font-family: "AvenirLTStd-Black";
+    font-family: "Prompt", sans-serif;
 }
 
 
@@ -479,7 +482,7 @@ body {
 }
 
 .player-slider input {
-    -webkit-appearance: var(--spotify-green);
+    appearance: var(--spotify-green);
     width: 100%;
     height: 5px;
     background-color: #6a6a6a;
@@ -507,4 +510,51 @@ body {
 .footer-player-right-buttons img {
     margin-right: 20px;
     width: 16px;
+}
+
+
+input[type=range] {
+    appearance: none;
+    /* Remove a aparência padrão */
+    width: 300px;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo da faixa (track) */
+input[type=range]::-webkit-slider-runnable-track {
+    background: #CACACA;
+    height: 8px;
+    border-radius: 5px;
+}
+
+input[type=range]::-moz-range-track {
+    background: #CACACA;
+    height: 8px;
+    border-radius: 5px;
+}
+
+/* Estilo do "thumb" (indicador) */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #1DB954;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #1DB954;
+    border-radius: 50%;
+    cursor: pointer;
 }
